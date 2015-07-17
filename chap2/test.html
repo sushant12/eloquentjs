@@ -1,0 +1,17 @@
+<script>
+"use strict";
+
+
+function isEven(num)
+{
+	if(num == 0)
+		console.log('true');
+	else if(num == 1)
+		console.log('false');
+	else
+		isEven(num-2);		
+		
+}
+
+isEven(0);
+</script>
