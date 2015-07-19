@@ -15,10 +15,24 @@ tions? Which one is more efficient?
 "use strict";
 
 function reverseArray(arg){
-	
+	var reversed = [];
+	for(var i = 0; i< arg.length; i++)
+	{
+		reversed.push(arg[arg.length-1-i]);
+	}
+	return reversed;
 }
 
-function reverseArrayInPlace(){
+function reverseArrayInPlace(arr){
+	for (var i = 0; i < Math.floor(arr.length/2); i++) {
+	      var temp = arr[i];
+	      arr[i] = arr[(arr.length - 1) - i]
+	      arr[(arr.length - 1) - i] = temp;
+	}
 }
 
-reverseArray([2,6,9,4,3);
+reverseArray([2,6,9,4,3]);
+
+var arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
