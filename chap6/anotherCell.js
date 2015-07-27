@@ -7,7 +7,6 @@ at least the given width and height , even if the inner cell would naturally be
 smaller.
 */
 "use strict";
-// Layout Out a Table p.108
 function repeat(string, times) {
   var result = "";
   var i = 0;
